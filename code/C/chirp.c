@@ -17,10 +17,6 @@ static void __chirp_phase(float* DataList, uint32_t ListLenth, double StartFreq,
 
 }
 
-float* chirp_f32_cos(float* data, uint32_t PointCount, double StartFreq, double EndFreq, double Samplerate, double phi) {
-	return chirp(data, PointCount, StartFreq, EndFreq, PointCount / Samplerate, phi);
-}
-
 float* chirp(float* DataList, uint32_t ListLenth, double StartFreq, double EndFreq, double UsedTime, double phi) {
 	uint32_t loop;
 	static double leftphi = 0;
